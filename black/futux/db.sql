@@ -1,0 +1,20 @@
+CREATE TABLE `t_grid` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `futu_id` int unsigned NOT NULL DEFAULT '0',
+  `code` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `s_order_id` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `s_price` float unsigned NOT NULL DEFAULT '0',
+  `s_qty` float unsigned NOT NULL DEFAULT '0',
+  `s_create_time` datetime NOT NULL DEFAULT '2000-01-01 00:00:00',
+  `s_dealt_avg_price` float unsigned NOT NULL DEFAULT '0',
+  `s_dealt_qty` float unsigned NOT NULL DEFAULT '0',
+  `b_order_id` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `b_price` float unsigned NOT NULL DEFAULT '0',
+  `b_qty` float unsigned NOT NULL DEFAULT '0',
+  `b_create_time` datetime NOT NULL DEFAULT '2000-01-01 00:00:00',
+  `b_dealt_avg_price` float unsigned NOT NULL DEFAULT '0',
+  `b_dealt_qty` float unsigned NOT NULL DEFAULT '0',
+  `status` tinyint unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `idx_futuid_code_status` (`futu_id`,`code`,`status`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

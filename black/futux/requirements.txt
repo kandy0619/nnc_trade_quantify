@@ -1,0 +1,7 @@
+futu-api==4.0
+protobuf==3.5.1
+simplejson
+PyCryptodome
+pandas
+peewee==3.14.0
+pymysql
